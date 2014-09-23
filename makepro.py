@@ -70,11 +70,11 @@ for filename in fileList:
 	extension = filename.split('.')
 	extensionTrueish = extension[1]
 	extensionLen = len(extension[1]) - 1
-	extensionTrue = extensionTrueish[0 : extensionLen]
+	extensionTrue = extensionTrueish.strip()
 
 	suffix = extension[0]
 
-	realFile = filename[0 : (len(filename) - 1)]
+	realFile = filename.strip()
 	path = "./" + folder + "/" + realFile
 	READrealFile = realFile + "\n"
 	readFile.write(READrealFile)
